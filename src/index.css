@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 170 95% 98%;
+    --foreground: 172 70% 12%;
+
+    --card: 170 95% 98%;
+    --card-foreground: 172 70% 12%;
+
+    --popover: 170 95% 98%;
+    --popover-foreground: 172 70% 12%;
+
+    --primary: 172 70% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 170 95% 92%;
+    --secondary-foreground: 172 70% 20%;
+
+    --muted: 170 95% 96%;
+    --muted-foreground: 172 70% 40%;
+
+    --accent: 170 95% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 350 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 172 70% 90%;
+    --input: 172 70% 90%;
+    --ring: 172 70% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 170 95% 98%;
+    --sidebar-foreground: 172 70% 20%;
+    --sidebar-primary: 172 70% 30%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 170 95% 92%;
+    --sidebar-accent-foreground: 172 70% 20%;
+    --sidebar-border: 172 70% 90%;
+    --sidebar-ring: 172 70% 50%;
+  }
+
+  .dark {
+    --background: 172 70% 12%;
+    --foreground: 170 95% 98%;
+
+    --card: 172 70% 15%;
+    --card-foreground: 170 95% 98%;
+
+    --popover: 172 70% 15%;
+    --popover-foreground: 170 95% 98%;
+
+    --primary: 172 70% 60%;
+    --primary-foreground: 172 70% 20%;
+
+    --secondary: 172 70% 20%;
+    --secondary-foreground: 170 95% 98%;
+
+    --muted: 172 70% 18%;
+    --muted-foreground: 170 95% 80%;
+
+    --accent: 170 95% 76%;
+    --accent-foreground: 170 95% 98%;
+
+    --destructive: 350 70% 40%;
+    --destructive-foreground: 170 95% 98%;
+
+    --border: 172 70% 20%;
+    --input: 172 70% 20%;
+    --ring: 172 70% 60%;
+
+    --sidebar-background: 172 70% 15%;
+    --sidebar-foreground: 170 95% 98%;
+    --sidebar-primary: 172 70% 50%;
+    --sidebar-primary-foreground: 170 95% 98%;
+    --sidebar-accent: 172 70% 20%;
+    --sidebar-accent-foreground: 170 95% 98%;
+    --sidebar-border: 172 70% 20%;
+    --sidebar-ring: 172 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground scroll-smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-center relative;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute left-1/2 -translate-x-1/2 bottom-0 w-20 h-1 bg-primary mt-2;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.skill-icon {
+  @apply w-16 h-16 mx-auto mb-2;
+}
+
+.icon-container {
+  @apply flex items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-full shadow-md;
+}
+
+.rotate-skill-container {
+  @apply relative h-32 w-full overflow-hidden;
+}
+
+.rotate-skill-item {
+  @apply absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-opacity;
+}
+
+.certificate-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-all hover:shadow-xl;
+}
+
+.project-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-[1.02] border border-gray-100 dark:border-gray-700;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#2DD4BF] to-[#0F766E];
+}
