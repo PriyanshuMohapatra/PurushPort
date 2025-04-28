@@ -35,7 +35,7 @@ export default function ProjectsSection() {
         "Streamlined gym operations by automating member check-ins, subscription tracking, and plan updates, reducing manual workload by 50%.",
         "Optimized system performance with structured programming practices, achieving quick data access and minimal system response times."
       ],
-      githubUrl: "#",
+      githubUrl: "https://github.com/purushothamkotha963/c_project",
       image: "/Prj.jpeg"
     }
   ];
